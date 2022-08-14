@@ -1,5 +1,5 @@
 <template>
-  <h1>Посты юзеров</h1>
+
 </template>
 
 <script>
@@ -8,5 +8,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
