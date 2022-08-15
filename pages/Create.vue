@@ -1,12 +1,11 @@
 <template>
   <div>
-    <h1>Создать</h1>
-    <PostFormComponentVue />
+    <CreatePostFormComponent />
   </div>
 </template>
 
 <script>
-import PostFormComponentVue from '~/components/PostFormComponent.vue';
+import CreatePostFormComponent from '~/components/CreatePostFormComponent.vue';
 
 export default {
   data() {
@@ -15,7 +14,7 @@ export default {
     }
   },
   components: {
-    PostFormComponentVue
+    CreatePostFormComponent
   }
 }
 </script>
