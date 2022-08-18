@@ -1,5 +1,5 @@
 <template>
-  <button class="btn">
+  <button class="btn" @click="$emit('click')">
     <slot></slot>
   </button>
 </template>
@@ -7,7 +7,6 @@
 <script>
 
 export default {
-  name: 'button-component',
 }
 </script>
 <style scoped>

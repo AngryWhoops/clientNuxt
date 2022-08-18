@@ -4,8 +4,9 @@
     <button class="btn" v-if="post.body.length <= 280" @click="createPost">Жмякай</button>
     <div v-else>Текст больше 280 элементов</div> -->
 
-    <input-field-component-vue @value="post.body = value" placeholder="Текст поста" />
-    <button-component-vue @click="createPost">Создать</button-component-vue>
+    <input-field-component-vue v-if="post.body.length <= 280" @input-string="post.body = $event"
+      placeholder="Текст поста" />
+    <ButtonComponentVue @click="createPost()">Создать</ButtonComponentVue>
   </form>
 </template>
 
@@ -17,13 +18,13 @@ export default {
   data() {
     return {
       post: {
-        body: '',
-      },
+        body: ''
+      }
     }
   },
   methods: {
     createPost() {
-      $axios
+      this.$axios
         .$post('createmypost', this.post)
         .catch(e => console.log(e.response))
 

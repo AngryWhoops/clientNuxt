@@ -1,5 +1,5 @@
 <template>
-  <input :value="input" @input="$emit('value', input)" class="input" type="text">
+  <input v-model="input" @input="$emit('input-string', input)" class="input" type="text">
 </template>
 
 <script>
@@ -11,6 +11,7 @@ export default {
       input: ''
     }
   },
+  emits: ['input-string']
 }
 </script>
 
