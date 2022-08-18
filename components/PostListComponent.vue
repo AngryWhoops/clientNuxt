@@ -9,32 +9,15 @@
 import PostComponentVue from './PostComponent.vue';
 
 export default {
-  async asyncData() {
-
-  },
-  created() {
-    this.getPosts();
-  },
   props: {
-    apiEndPoint: {
-      type: String,
-      requered: true
-    }
-
-  },
-  data() {
-    return {
-      posts: []
+    posts: {
+      type: Array,
+      required: true
     }
   },
   components: {
     PostComponentVue
   },
-  methods: {
-    getPosts() {
-      this.$axios.get(this.apiEndPoint).then(response => this.posts = response.data);
-    }
-  }
 }
 </script>
 
