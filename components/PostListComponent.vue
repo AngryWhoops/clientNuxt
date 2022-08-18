@@ -9,6 +9,9 @@
 import PostComponentVue from './PostComponent.vue';
 
 export default {
+  async asyncData() {
+
+  },
   created() {
     this.getPosts();
   },

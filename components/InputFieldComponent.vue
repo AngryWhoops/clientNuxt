@@ -1,24 +1,16 @@
 <template>
-  <form @submit.prevent>
-    <input v-model="inputFieldString" class="input" type="text" placeholder="Название хештега">
-    <button class="btn" @click="customFunction">Жмякай</button>
-  </form>
+  <input :value="input" @input="$emit('value', input)" class="input" type="text">
 </template>
 
 <script>
 
 export default {
+  name: 'input-field',
   data() {
     return {
-      inputFieldString: '',
+      input: ''
     }
   },
-  props: {
-    customFunction: {
-      type: Function,
-      required: true
-    }
-  }
 }
 </script>
 
