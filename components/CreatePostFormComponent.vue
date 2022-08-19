@@ -4,8 +4,7 @@
     <button class="btn" v-if="post.body.length <= 280" @click="createPost">Жмякай</button>
     <div v-else>Текст больше 280 элементов</div> -->
 
-    <input-field-component-vue v-if="post.body.length <= 280" @input-string="post.body = $event"
-      placeholder="Текст поста" />
+    <input-field-component-vue @input-string="post.body = $event" placeholder="Текст поста" />
     <ButtonComponentVue @click="createPost()">Создать</ButtonComponentVue>
   </form>
 </template>

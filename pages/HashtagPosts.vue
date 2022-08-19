@@ -1,12 +1,13 @@
 <template>
   <div>
-    <form @submit.prevent>
-      <InputFieldComponentVue @input-string="hashtag = $event" />
-      <ButtonComponent />
-    </form>
     <h1>Посты по хештегам</h1>
 
-    <PostListComponentVue :posts="postsByHashtag" />
+    <form @submit.prevent>
+      <InputFieldComponentVue @input-string="hashtag = $event" placeholder="Название хештега" />
+      <ButtonComponentVue @click="findPosts()">Найти</ButtonComponentVue>
+    </form>
+
+    <PostListComponentVue :posts="posts" />
   </div>
 </template>
 
@@ -14,29 +15,23 @@
 import InputFieldComponentVue from '~/components/InputFieldComponent.vue';
 import ButtonComponentVue from '~/components/ButtonComponent.vue';
 import PostListComponentVue from '~/components/PostListComponent.vue';
-import ButtonComponent from '~/components/ButtonComponent.vue';
 
 export default {
-  /* async asyncData({ hashtag, $axios }) {
-    const postsByHashtag = await $axios.$get('getpostsbyhashtag/' + hashtag);
-    return { postsByHashtag };
-  }, */
   data() {
     return {
       hashtag: '',
-      posts: ''
+      posts: []
     }
   },
   methods: {
-    findPosts() {
-      this.$axios.$get('getpostsbyhashtag/' + this.hashtag).then(response => this.posts = response.data);
+    async findPosts() {
+      this.posts = await this.$axios.$get('getpostsbyhashtag/' + this.hashtag);
     }
   },
   components: {
     PostListComponentVue,
     InputFieldComponentVue,
     ButtonComponentVue,
-    ButtonComponent
   },
 }
 </script>

@@ -7,6 +7,7 @@
 <script>
 
 export default {
+  emits: ['click']
 }
 </script>
 <style scoped>
