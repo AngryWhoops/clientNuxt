@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="navigation">
-      <NuxtLink class="link" to="/">Лента</NuxtLink>
+      <nuxt-link class="link" to="/">Лента</nuxt-link>
       <NuxtLink class="link" to="/create">Создать пост</NuxtLink>
       <NuxtLink class="link" to="/hashtagposts">Посты по тегу</NuxtLink>
       <NuxtLink class="link" to="/userposts">Пользовательские посты</NuxtLink>
