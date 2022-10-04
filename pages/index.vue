@@ -1,20 +1,20 @@
 <template>
   <div>
-    <h1>Фид лента, Корень</h1>
-    <PostListComponentVue :posts="posts" />
+    <second-component v-model="localVar"/>
   </div>
 
 </template>
 
 <script>
-import PostListComponentVue from '~/components/PostListComponent.vue';
+import SecondComponent from "~/components/SecondComponent";
 export default {
-  async asyncData({ $axios }) {
-    const posts = await $axios.$get('getallmyposts');
-    return { posts };
+  data() {
+    return {
+        localVar: 'Jopa'
+    }
   },
   components: {
-    PostListComponentVue
+    SecondComponent
   }
 }
 </script>
