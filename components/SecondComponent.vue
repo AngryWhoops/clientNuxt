@@ -1,6 +1,6 @@
 <template>
   <div>
-    <input type="text" v-model="changeInput">
+    <input type="text" :value="modelValue" @input="updateValue($event.target.value)" >
   </div>
 </template>
 
@@ -8,21 +8,21 @@
 export default {
   name: "SecondComponent",
   props: {
-    inputValue: {
+    modelValue: {
       type: [String, Number],
       default: ''
     }
   },
+  emits: ['update:modelValue', 'change'],
   model: {
-    prop: 'inputValue',
-    event: 'update'
+    prop: 'modelValue',
+    event: 'update:modelValue'
   },
   data() {
     return {
-      localValue: this.inputValue
     }
   },
-  computed: {
+  /*computed: {
     changeInput: {
       get() {
         return this.localValue;
@@ -32,7 +32,18 @@ export default {
           this.$emit('update', value);
       }
     }
-  },
+  },*/
+  methods: {
+    /*
+    *UpdateModelValue совпадает с настроенной моделью
+    */
+    updateValue(value) {
+      this.$emit('update:modelValue', value);
+    },
+    onChange(e) {
+      this.$emit('change', this.modelValue, e);
+    }
+  }
 }
 </script>
 
