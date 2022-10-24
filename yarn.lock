@@ -3755,7 +3755,7 @@ __metadata:
   dependencies:
     "@nuxt/types": ~2.15.0
     "@nuxtjs/axios": ^5.13.6
-    core-js: ^3.19.3
+    core-js: ^3.26.0
     nuxt: ^2.15.8
     vue: ^2.6.14
     vue-server-renderer: ^2.6.14
@@ -4034,10 +4034,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.19.3":
-  version: 3.24.1
-  resolution: "core-js@npm:3.24.1"
-  checksum: 6fb5bf0fd9e9f3e69d95616dd03332fea6758a715d2628c108b5faf17b48b0f580e90c4febb0a523c4665b0991a810de16289f86187fe79d70cc722dbd3edf0e
+"core-js@npm:^3.26.0":
+  version: 3.26.0
+  resolution: "core-js@npm:3.26.0"
+  checksum: 0149eb9d3909fde9c17626af3a6e625c326e8598d0bb5e6c5b48a18e5fcd4eaf48d4964d873667d8148542ff590fb98eb3f93618da114ca54999d6bc0349734b
   languageName: node
   linkType: hard
 
