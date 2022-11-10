@@ -3758,7 +3758,7 @@ __metadata:
     core-js: ^3.19.3
     nuxt: ^2.15.8
     vue: ^2.6.14
-    vue-server-renderer: ^2.6.14
+    vue-server-renderer: ^2.7.14
     vue-template-compiler: ^2.6.14
     webpack: ^4.46.0
   languageName: unknown
@@ -11118,7 +11118,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-server-renderer@npm:^2.6.12, vue-server-renderer@npm:^2.6.14":
+"vue-server-renderer@npm:^2.6.12":
   version: 2.7.8
   resolution: "vue-server-renderer@npm:2.7.8"
   dependencies:
@@ -11131,6 +11131,22 @@ __metadata:
     serialize-javascript: ^6.0.0
     source-map: 0.5.6
   checksum: b56d98d1bfa52c980068a53d5f0a21293c1083536d0306bc49ea894c9055c55167600a694828d5694abe3ffe240963b58261a562cd4d94f16daa2fc98fcf1d67
+  languageName: node
+  linkType: hard
+
+"vue-server-renderer@npm:^2.7.14":
+  version: 2.7.14
+  resolution: "vue-server-renderer@npm:2.7.14"
+  dependencies:
+    chalk: ^4.1.2
+    hash-sum: ^2.0.0
+    he: ^1.2.0
+    lodash.template: ^4.5.0
+    lodash.uniq: ^4.5.0
+    resolve: ^1.22.0
+    serialize-javascript: ^6.0.0
+    source-map: 0.5.6
+  checksum: 736672de638287d89c23b68a833e5d46e6c202cbd8af9850fac5da37e6682022932a866b0beafc40b50c9d699532e0d2446d11fae8153f0dc1938b75574671d4
   languageName: node
   linkType: hard
 
