@@ -19,6 +19,6 @@
   },
   "packageManager": "yarn@3.2.2",
   "devDependencies": {
-    "@nuxt/types": "~2.15.0"
+    "@nuxt/types": "~2.16.3"
   }
 }
